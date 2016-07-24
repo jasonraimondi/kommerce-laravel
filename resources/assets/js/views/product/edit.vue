@@ -1,8 +1,6 @@
 <template>
 
   <article>
-    EDIT THIS PRODUCT
-
     <h1>
       <a v-link="{ name: 'product' }">&laquo;</a>
       {{ product.name }}

@@ -2,7 +2,6 @@
 
   <article>
 
-    <product-search></product-search>
 
     <div class="row lk-list-product-header hide-for-small-only">
       <div class="medium-3 columns" v-for="(name, showTitle) in show" v-if="showTitle">
@@ -23,20 +22,12 @@
 </template>
 
 <script>
-  import ProductSearch from '../../components/ProductSearch.vue';
-
   export default {
-
-    components: {
-      ProductSearch
-    },
 
     data() {
       return {
         products: [],
         show: {
-          'slug': true,
-          'sku': true,
           'name': true,
           'quantity': true,
           'unitPrice': false,
@@ -44,8 +35,8 @@
           'isPriceVisible': false,
           'isActive': false,
           'isVisible': false,
-          'isTaxable': false,
-          'isShippable': false,
+          'isTaxable': true,
+          'isShippable': true,
           'areAttachmentsEnabled': false,
         }
       };
