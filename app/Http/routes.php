@@ -1,10 +1,10 @@
 <?php
 
 Route::get('/', function () {
-    return view('default');
+    return redirect()->route('api.products.index');
 });
 
-Route::group(['prefix' => 'api'], function() {
+Route::group(['prefix' => 'api', 'middleware' => ['cors']], function() {
     Route::resource('products', 'ProductController');
 });
 
